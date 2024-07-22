@@ -20,7 +20,7 @@ spec:
 #          args:
 #            - "--ignore-db-dir=lost+found"
           volumeMounts:
-            - name: vpr-db-data
+            - name: vpro-db-data
               mountPath: /var/lib/mysql
           ports:
             - name: vprodb-port
@@ -44,5 +44,5 @@ spec:
           image: busybox:latest
           command: ['rm', '-rf', '/var/lib/mysql/lost+found']
           volumeMounts:
-            - name: vpr-db-data
+            - name: vpro-db-data
               mountPath: /var/lib/mysql
